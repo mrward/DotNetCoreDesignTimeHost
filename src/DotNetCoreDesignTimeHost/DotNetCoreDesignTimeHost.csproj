@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{FEA7A637-CD20-4DAB-B4F8-5858911E11FC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DotNetCoreDesignTimeHost</RootNamespace>
+    <AssemblyName>DotNetCoreDesignTimeHost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>true</ConsolePause>
+    <ExternalConsole>true</ExternalConsole>
+    <Commandlineparameters>D:\temp\deletethisfolder\dnx510awefwe</Commandlineparameters>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DesignTimeHostManager.cs" />
+    <Compile Include="ProcessExtensions.cs" />
+    <Compile Include="PlatformHelper.cs" />
+    <Compile Include="ProcessingQueue.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\InitializeMessage.cs" />
+    <Compile Include="Models\CompilationOptionsMessage.cs" />
+    <Compile Include="Models\DependenciesMessage.cs" />
+    <Compile Include="Models\DependencyDescription.cs" />
+    <Compile Include="Models\DependencyItem.cs" />
+    <Compile Include="Models\DiagnosticsListMessage.cs" />
+    <Compile Include="Models\ErrorMessage.cs" />
+    <Compile Include="Models\FrameworkData.cs" />
+    <Compile Include="Models\ProjectMessage.cs" />
+    <Compile Include="Models\ReferencesMessage.cs" />
+    <Compile Include="Models\SourcesMessage.cs" />
+    <Compile Include="Models\CommonCompilerOptions.cs" />
+    <Compile Include="Models\DiagnosticMessageView.cs" />
+    <Compile Include="Models\DiagnosticMessageSeverity.cs" />
+    <Compile Include="Models\ProjectReferenceDescription.cs" />
+    <Compile Include="Models\ChangeConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
