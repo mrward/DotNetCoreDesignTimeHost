@@ -54,7 +54,6 @@
     <Compile Include="Models\DiagnosticsListMessage.cs" />
     <Compile Include="Models\ErrorMessage.cs" />
     <Compile Include="Models\FrameworkData.cs" />
-    <Compile Include="Models\ProjectMessage.cs" />
     <Compile Include="Models\ReferencesMessage.cs" />
     <Compile Include="Models\SourcesMessage.cs" />
     <Compile Include="Models\CommonCompilerOptions.cs" />
@@ -62,6 +61,7 @@
     <Compile Include="Models\DiagnosticMessageSeverity.cs" />
     <Compile Include="Models\ProjectReferenceDescription.cs" />
     <Compile Include="Models\ChangeConfiguration.cs" />
+    <Compile Include="Models\ProjectInformationMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
