@@ -57,7 +57,7 @@ namespace DotNetCoreDesignTimeHost
 
                 var psi = new ProcessStartInfo
                 {
-                    FileName = "dotnet.exe",
+                    FileName = "dotnet",
                     CreateNoWindow = true,
                     UseShellExecute = false,
                     RedirectStandardError = true,
